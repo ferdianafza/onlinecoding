@@ -1,6 +1,7 @@
 class ContentsController < InheritedResources::Base
 
   before_action :set_content, only: %i[ show edit update destroy ]
+  # before_action :authenticate_user!, only: %i[  edit update destroy new ]
 
   def show
     @list = Content.order(created_at: :desc).limit(2)

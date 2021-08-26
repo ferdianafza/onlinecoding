@@ -1,5 +1,4 @@
 class HomesController < ApplicationController
-  before_action :authenticate_user!
   def index
     @contents = Content.order(created_at: :desc).limit(4)
     @listcontents = Content.order(created_at: :desc).page params[:page]

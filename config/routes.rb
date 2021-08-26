@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  # devise_for :admin_users, ActiveAdmin::Devise.config
   resources :contents
-  devise_for :users, controllers: { sessions: 'users/sessions' }
+    devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
   devise_scope :user do
     get 'sign_in', to: 'devise/sessions#new'
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
+  # devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
+  # devise_scope :user do
+  #   get 'sign_in', to: 'devise/sessions#new'
+  #   get '/users/sign_out' => 'devise/sessions#destroy'
+  # end
   resources :homes
   root to: 'homes#index'
   # devise_for :users
