@@ -1,29 +1,35 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Contents</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Judul</th>
-      <th>Isi</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @contents.each do |content| %>
-      <tr>
-        <td><%= content.judul %></td>
-        <td><%= content.isi %></td>
-        <td><%= link_to 'Show', content %></td>
-        <td><%= link_to 'Edit', edit_content_path(content) %></td>
-        <td><%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Content', new_content_path %>
+<div class="container-fluid pb-4 pt-4 paddding">
+    <div class="container paddding">
+        <div class="row mx-0">
+            <div id="artikel" class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
+                <div>
+                    <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Artikel Saya</div>
+                </div>
+                <% @contents.each do |content| %>
+                <div class="row pb-4">
+                    <div class="col-md-5">
+                        <div class="fh5co_hover_news_img">
+                            <div class="fh5co_news_img"><img src="<%= url_for(content.banner)%>" alt=""/></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 animate-box">
+                      <br>
+                        <a href="/contents/<%= content.id %>" class="fh5co_magna py-2" style="list-style-type: none; text-decoration: none; color: white;" > <%= content.judul %> </a>
+                        <!-- <a href="single.html" class="fh5co_mini_time py-3"> Thomson Smith -
+                        April 18,2016 </a> -->
+                        <div class="fh5co_consectetur"> <%= truncate(strip_tags(content.rich_text_isi.to_s), length: 15) %>
+                        </div>
+                        <td style="list-style-type: none; text-decoration: none;" ><%= link_to 'Show', content %></td>
+                        <td><%= link_to 'Edit', edit_content_path(content) %></td>
+                        <td><%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    </div>
+                </div>
+                <% end %>
+                <center>
+                  <%= paginate @contents %>
+                </center>
+                </div>
+              </div>
+            </div>
+          </div>

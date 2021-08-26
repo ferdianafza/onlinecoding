@@ -21,6 +21,7 @@
             </a>
             <h2>
               <h2><%= @content.judul %></h2>
+              <p>Oleh: <%= User.find_by(id: @content.user_id).email %></p>
             </h2>
             <h3 class="lead"><%= @content.isi %></h3>
           </div>

@@ -103,8 +103,7 @@
                         <a href="/contents/<%= content.id %>" class="fh5co_magna py-2" style="list-style-type: none; text-decoration: none; color: white;" > <%= content.judul %> </a>
                         <!-- <a href="single.html" class="fh5co_mini_time py-3"> Thomson Smith -
                         April 18,2016 </a> -->
-                        <div class="fh5co_consectetur"> Amet consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                        <div class="fh5co_consectetur"> <%= truncate(strip_tags(content.rich_text_isi.to_s), length: 15) %>
                         </div>
                     </div>
                 </div>

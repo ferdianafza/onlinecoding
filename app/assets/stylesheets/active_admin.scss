@@ -10,10 +10,9 @@
 // Active Admin's got SASS!
 @import "active_admin/mixins";
 @import "active_admin/base";
-// @import 'activeadmin/quill_editor/quill.snow';
-// @import 'activeadmin/quill_editor_input';
-@import 'font-awesome/font-awesome';
-@import 'activeadmin/froala_editor_input';
+@import 'activeadmin/quill_editor/quill.snow';
+@import 'activeadmin/quill_editor_input';
+
 // Overriding any non-variable Sass must be done after the fact.
 // For example, to change the default status-tag color:
 //

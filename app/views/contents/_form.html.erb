@@ -29,6 +29,14 @@
   <div class="field">
     <%= form.text_field :judul, placeholder: 'Judul', class: 'formartikel', require: true, id: 'judul' %>
   </div>
+  <div class="row" hidden="">
+      <div class="col-25">
+        <%= form.label :user_id %>
+      </div>
+      <div class="col-75">
+        <%= form.text_field :user_id, :value => current_user.id %>
+      </div>
+    </div>
   <br>
   <div class="field">
     <%= form.rich_text_area :isi,placeholder: 'Isi Artikel Anda', require: true %>
