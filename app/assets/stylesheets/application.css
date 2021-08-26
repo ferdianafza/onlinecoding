@@ -13,8 +13,4 @@
  *= require_tree .
  *= require_self
 @import "./actiontext.scss";
-
- */
- /*
- *= require font-awesome
  */
