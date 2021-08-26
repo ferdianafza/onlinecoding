@@ -77,9 +77,9 @@
                     </li>
                      <li class="nav-item ">
                         <%unless current_user.blank? -%>
-                            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'dropdown-item'  %>
+                            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav-link'  %>
                         <%else -%>
-                                    <%=  link_to "Sign in", user_session_path, :class => "dropdown-item" %>
+                                    <%=  link_to "Sign in", user_session_path, :class => "nav-link" %>
                         <%end-%>
                     </li>
                     <!-- <li class="nav-item dropdown">
