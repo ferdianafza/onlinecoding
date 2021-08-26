@@ -50,16 +50,6 @@
                 <div class="text-center d-inline-block">
                     <a href="https://fb.com/fh5co" target="_blank" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-facebook"></i></div></a>
                 </div>
-                <!--<div class="d-inline-block text-center"><img src="images/country.png" alt="img" class="fh5co_country_width"/></div>-->
-                <!-- <div class="d-inline-block text-center dd_position_relative ">
-                    <select class="form-control fh5co_text_select_option">
-                        <option>English </option>
-                        <option>French </option>
-                        <option>German </option>
-                        <option>Spanish </option>
-                    </select>
-                </div> -->
-                <!-- <div class="clearfix"></div> -->
             </div>
         </div>
     </div>
@@ -82,15 +72,21 @@
                     <li class="nav-item ">
                         <a class="nav-link" href="/#populer" style="list-style-type: none;text-decoration: none;" >Populer <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/contents/new" style="list-style-type: none;text-decoration: none;" >Buat Artikel <span class="sr-only">(current)</span></a>
+                    </li>
+                     <li class="nav-item ">
+                        <%=  link_to "Sign in", user_session_path, :class => "nav-link" %>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton2" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false"style="list-style-type: none;text-decoration: none;" >Artikel Saya <span class="sr-only">(current)</span></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
                             <a class="dropdown-item" href="/contents/new" style="list-style-type: none;text-decoration: none;" >Buat</a>
                             <a class="dropdown-item" href="/contents" style="list-style-type: none;text-decoration: none;" >Lihat</a>
                         </div>
-                    </li>
-                    <li class="nav-item dropdown">
+                    </li> -->
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton3" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false" style="list-style-type: none;text-decoration: none;" >Akun<span class="sr-only">(current)</span></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
@@ -102,7 +98,7 @@
                                     <%=  link_to "Sign in", user_session_path, :class => "dropdown-item" %>
                                 <%end-%>
                         </div>
-                    </li>
+                    </li> -->
                     <!-- <li class="nav-item ">
                         <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav-link'  %>
                     </li> -->
